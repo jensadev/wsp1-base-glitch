@@ -22,9 +22,8 @@ Innan vi börjar skapa våra routes så är det bra att planera vilka sidor vi v
 |-------|-----|-------------|
 | GET | / | Startsidan |
 | GET | /about | Om oss |
-| GET | /adventure | Äventyrssidan |
-| POST | /adventure | Skicka in ett val |
-| GET | /adventure/:id | Visa äventyr med id |
+| GET | /contact | Kontakta oss |
+| POST | /contact | Skicka in ett meddelande |
 
 ## Skapa routes
 
@@ -125,4 +124,26 @@ Jag hoppas att du ser hur kraftfullt template systemet är för att snabbt kunna
 ### Övning
 
 Lite repetition från webbutveckling 1, styla din navbar!
+
+## POST-förfrågningar
+
+POST-förfrågningar används för att skicka data till servern. Vi kommer att skapa en POST-route för att hantera formulär som skickas in från klienten. För att kunna ta emot och hantera data från formulär så måste vi installera ett paket som heter `body-parser`. Detta paket används för att parsa (bearbeta) data som skickas i en POST-förfrågan.
+
+### Installera body-parser
+
+För att installera `body-parser` så kör följande kommando i terminalen:
+```bash
+npm install body-parser
+```
+
+### Använda body-parser
+
+Nu när vi har installerat `body-parser` så måste vi importera det i vår `server.js` fil och använda det där. Öppna `server.js` filen och lägg till följande kod:
+```javascript
+import bodyParser from 'body-parser'
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+```
+
+
 
