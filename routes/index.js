@@ -25,4 +25,13 @@ router.get('/contact', (req, res) => {
     res.render('contact', data)
 })
 
+router.post('/contact', (req, res) => {
+    console.log(req.body)
+    res.send('Meddelandet har skickats!')
+})
+
+router.get('/error', (req, res) => {
+    throw new Error('Detta är ett testfel!')
+})
+
 export default router
