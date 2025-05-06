@@ -1,0 +1,24 @@
+{
+  "name": "wsp1-base-glitch",
+  "version": "1.0.0",
+  "description": "Det här är en testapplikaton för att visa och förklara grunderna i webbserverprogrammering. Vi kommer att använda node.js och Express.js för att bygga en enkel webbserver som kan hantera olika typer av HTTP-förfrågningar.",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
