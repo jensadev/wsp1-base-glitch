@@ -1,6 +1,5 @@
 import express from 'express'
 import nunjucks from 'nunjucks'
-import bodyParser from 'body-parser'
 import morgan from 'morgan'
 
 import indexRouter from './routes/index.js'
@@ -15,8 +14,8 @@ nunjucks.configure('views', {
 })
 
 app.use(morgan('dev'))
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
 app.set('view engine', 'njk')
 app.set('views', './views')

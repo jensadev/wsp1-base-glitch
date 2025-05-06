@@ -129,25 +129,11 @@ Lite repetition från webbutveckling 1, styla din navbar!
 
 ## POST-förfrågningar
 
-POST-förfrågningar används för att skicka data till servern. Vi kommer att skapa en POST-route för att hantera formulär som skickas in från klienten. För att kunna ta emot och hantera data från formulär så måste vi installera ett paket som heter `body-parser`. Detta paket används för att parsa (bearbeta) data som skickas i en POST-förfrågan.
+POST-förfrågningar används för att skicka data till servern. Vi kommer att skapa en POST-route för att hantera formulär som skickas in från klienten. För att kunna ta emot och hantera data från formulär så måste vi konfigurera vår server för att kunna hantera POST-förfrågningar.
 
-### Installera body-parser
+### Hantera POST-förfrågningar
 
-För att installera `body-parser` så kör följande kommando i terminalen:
-```bash
-npm install body-parser
-```
-
-### Använda body-parser
-
-Nu när vi har installerat `body-parser` så måste vi importera det i vår `server.js` fil och använda det där. Öppna `server.js` filen och lägg till följande kod:
-```javascript
-import bodyParser from 'body-parser'
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
-```
-
-Nu när vi har installerat och konfigurerat `body-parser` så kan vi börja skapa våra POST-routes. Vi kommer att skapa en POST-route för att hantera formulär som skickas in från klienten.
+För att konfigurera servern att hantera data skickat från formulär så behöver vi konfigurera det i vår `server.js` fil. Det görs genom en metod i express som heter `express.urlencoded()`. Denna metod används för att parsa data som skickas från formulär.
 
 ## En ny route, /contact
 
@@ -272,10 +258,9 @@ Om du vill så kan du göra samma för 500 felmeddelandet.
     * Vilka metoder används för att definiera routes i Express.js?
 2. Hur skapar vi en GET-route för /about och vad är syftet med att använda en vy för denna route?
 3. Beskriv tre fördelar med att använda templater för att generera HTML-sidor dynamiskt?
-4. Vad är body-parser och varför behöver vi det?
-5. Vilka egenskaper har ett formulär i HTML och hur kan vi använda dem för att skicka data till servern?
-6. Hur kan du säkerställa att dina routes är organiserade och lättillgängliga?
-7. Hur skulle du lägga till en ny GET-route för en sida som visar en lista över produkter?
+4. Vilka egenskaper har ett formulär i HTML och hur kan vi använda dem för att skicka data till servern?
+5. Hur kan du säkerställa att dina routes är organiserade och lättillgängliga?
+6. Hur skulle du lägga till en ny GET-route för en sida som visar en lista över produkter?
 
 ## Sammanfattning
 
