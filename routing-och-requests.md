@@ -18,12 +18,14 @@ När vi skapar routes så använder vi oss av en praxis som kallas för Represen
 
 Innan vi börjar skapa våra routes så är det bra att planera vilka sidor vi vill ha i vår applikation och hur de ska länka till varandra. Här är ett exempel på hur det kan se ut:
 
-| metod | URL | beskrivning |
-|-------|-----|-------------|
-| GET | / | Startsidan |
-| GET | /about | Om oss |
-| GET | /contact | Kontakta oss |
-| POST | /contact | Skicka in ett meddelande |
+| metod | URL | beskrivning | template |
+|-------|-----|-------------|----------|
+| GET   | /   | Startsidan  | index.njk |
+| GET   | /about | Om oss   | about.njk |
+| GET   | /contact | Kontakta oss | contact.njk |
+| POST  | /contact | Skicka in ett meddelande | - |
+| GET   | /error | Testa 500 felmeddelande | 500.njk |
+| ALL   | *   | Hantera 404 felmeddelande | 404.njk |
 
 ## Skapa routes
 
@@ -266,7 +268,14 @@ Om du vill så kan du göra samma för 500 felmeddelandet.
 
 ## Frågor
 
-
+1. Vad är routing och hur används det i Express.js?
+    * Vilka metoder används för att definiera routes i Express.js?
+2. Hur skapar vi en GET-route för /about och vad är syftet med att använda en vy för denna route?
+3. Beskriv tre fördelar med att använda templater för att generera HTML-sidor dynamiskt?
+4. Vad är body-parser och varför behöver vi det?
+5. Vilka egenskaper har ett formulär i HTML och hur kan vi använda dem för att skicka data till servern?
+6. Hur kan du säkerställa att dina routes är organiserade och lättillgängliga?
+7. Hur skulle du lägga till en ny GET-route för en sida som visar en lista över produkter?
 
 ## Sammanfattning
 
@@ -274,4 +283,4 @@ I det här avsnittet har vi gått igenom hur vi kan hantera olika typer av HTTP-
 
 ## Kod
 
-Vill du titta på koden för det här steget så hittar du en länken till comitten här: [Routing och hantering av HTTP-förfrågningar]()
+Vill du titta på koden för det här steget så hittar du en länken till comitten här: [Routing och hantering av HTTP-förfrågningar](https://github.com/jensadev/wsp1-base-glitch/tree/31e6808e96f465dd1e3977a519a61932d0183f8a)
