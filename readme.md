@@ -17,4 +17,4 @@ Eftersom vi kommer att låta användaren välja olika vägar genom spelet så ko
 
 1. [Installation och setup](installation-och-setup.md)
 2. [HTML-templater och CSS](html-templater-och-css.md)
-3. [Routing och hantering av HTTP-förfrågningar](routing-och-hantering-av-http-forfragningar.md)
+3. [Routing och hantering av HTTP-förfrågningar](routing-och-requests.md)
