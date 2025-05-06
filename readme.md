@@ -15,6 +15,6 @@ Eftersom vi kommer att låta användaren välja olika vägar genom spelet så ko
 
 ## Innehållsförteckning
 
-1. [Installation och setup](installation-och-setup.md)
-2. [HTML-templater och CSS](html-templater-och-css.md)
-3. [Routing och hantering av HTTP-förfrågningar](routing-och-requests.md)
+1. [Installation och setup](docs/installation-och-setup.md)
+2. [HTML-templater och CSS](docs/html-templater-och-css.md)
+3. [Routing och hantering av HTTP-förfrågningar](docs/routing-och-requests.md)
