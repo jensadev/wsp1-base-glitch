@@ -217,3 +217,7 @@ Lägg till en bild för att testa att skapa statiskt innehåll. Använd sedan bi
 ## Sammanfattning
 
 Vi har nu tittat på att använda templater för att generera HTML-sidor dynamiskt. Vi har också sett hur vi kan använda en layout för att undvika upprepning av kod. Vi har också sett hur vi kan använda statiska filer för att styla vår applikation.
+
+## Kod
+
+Vill du titta på koden för det här steget så hittar du en länken till comitten här: [html-templater-och-css](https://github.com/jensadev/wsp1-base-glitch/tree/9b914b6b5ca4a155c6ff4d8f7d513b24315b2bc1)

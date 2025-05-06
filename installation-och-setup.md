@@ -116,4 +116,6 @@ Slutligen så bör Visual Studio Code ge dig en del hjälp med att hitta fel i k
 
 Vi har nu installerat node.js och Express.js och skapat en enkel webbserver som kan hantera GET-förfrågningar. Det är en grund som du kommer att upprepa i de flesta projekt du skapar i framtiden men också något som du kommer kunna bygga vidare på.
 
-Vill du titta på koden för det här steget så kan du komma åt den med länken till denna commit, [installation och setup](https://github.com/jensadev/wsp1-base-glitch/tree/76bbeb67be825aba2c85c93d22f11374ea80e957)
+## Kod
+
+Vill du titta på koden för det här steget så hittar du en länken till comitten här: [installation och setup](https://github.com/jensadev/wsp1-base-glitch/tree/76bbeb67be825aba2c85c93d22f11374ea80e957)
