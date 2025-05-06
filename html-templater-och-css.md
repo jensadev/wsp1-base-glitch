@@ -118,4 +118,102 @@ Starta sedan om scriptet med `npm run dev` så kommer servern att ladda om när 
 
 ## Layout och att undvika upprepning
 
+Vi har nu skapat en HTML-templat som vi använder för vår `index`-sida. Om jag nu ger dig i uppdrag att skapa en `about`-sida så kommer du att behöva skapa en ny templat för den sidan med samma grundläggnade HTML-struktur som `index`-sidan. Detta är inte optimalt eftersom vi kommer att behöva upprepa oss själva och det kommer att bli svårt att underhålla koden. Kom ihåg vi använder oss av templater för att förbättra vår kod.
 
+För att undvika detta så kan vi använda oss av en layout. En layout är en HTML-templat som innehåller den grundläggande strukturen för vår sida. Vi kan sedan använda denna layout i våra andra templater.
+Skapa en ny fil med namnet `layout.njk` i `views` mappen. Denna fil kommer att innehålla vår layout.
+
+### Layoutens struktur
+
+I `layout.njk` filen så kan vi skapa en grundläggande HTML-struktur som kommer att användas för alla våra sidor. Vi kan sedan skapa ett block där vi kan fylla i innehållet för varje sida. Detta block kommer att kallas `content` och kommer att användas för att fylla i innehållet för varje sida.
+
+```html
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>
+```
+
+Nu har vi skapat en layout som innehåller den grundläggande strukturen för vår sida. Vi kan nu använda denna layout i våra andra templater.
+
+### Variabler och templat kommandon
+
+I layouten så har vi använt `{{ title }}` för att fylla i titeln för sidan. Detta kommer att fyllas i med den data som vi skickar till templaten. Vi kan också använda andra templater kommandon i layouten, som `{% block %}`-taggen för att skapa block där vi kan fylla i innehållet för varje sida.
+
+### Använda layouten
+
+Vi kan nu använda layouten i vår `index`-templat. För att göra detta så måste vi först inkludera layouten i templaten. Detta gör vi genom att använda `{% extends %}`-taggen. Vi kan sedan använda `{% block %}`-taggen för att fylla i innehållet för varje sida.
+Ändra `index.njk` filen så att den ser ut som följande:
+
+```html
+{% extends "layout.njk" %}
+
+{% block content %}
+<main>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+</main>
+{% endblock %}
+```
+
+Ladda om sidan, nu när vi använder layout så bör du se att sidans titeln nu använder sig av `title` variabeln som vi skickade till templaten.
+
+## Statiska filer
+
+Nu när vi har skapat en layout och en template så kan vi titta på hur vi använder statiska filer i vår applikation. Statiska filer är filer som inte ändras när servern körs. Detta inkluderar bland annat CSS-filer och bilder. Vi kommer att använda en CSS-fil för att styla vår applikation.
+
+### Konfigurera statiska filer
+
+För att kunna använda statiska filer i vår applikation så måste vi konfigurera Express.js för att servera dessa filer. Vi kommer att göra detta genom att använda `express.static`-metoden. Lägg till följande rad i din `server.js` fil:
+
+```javascript
+app.use(express.static('public'))
+```
+Denna rad kommer att konfigurera Express.js för att servera statiska filer från `public` mappen. Vi kommer att lägga till vår CSS-fil i denna mapp.
+
+#### Public mappen
+
+Nu när vi har konfigurerat Express.js för att servera statiska filer så kan vi skapa en mapp för våra statiska filer. Skapa en ny mapp med namnet `public` i din projektmapp. Denna mapp kommer att innehålla alla våra statiska filer, inklusive CSS-filer och bilder.
+
+Anledningen till att vi döper mappen `public` är för att det är en konvention inom webbutveckling. Det gör det tydligt att dessa filer är offentliga och kan nås av alla. Det är också en standard som används av många ramverk och bibliotek, inklusive Express.js.
+
+`public` mappen syns aldrig i webbläsaren, utan det är bara en mapp som används för att lagra statiska filer. När vi laddar en sida så kommer webbläsaren att begära dessa filer från `/` och inte från `/public`. Så du ska aldrig referera till `/public` i din css eller html.
+
+### Skapa en CSS-fil
+
+Inuti `public` mappen så skapar vi en fil med namnet `style.css`. Denna fil kommer att innehålla vår CSS-kod.
+I `style.css` filen så kan vi lägga till lite grundläggande CSS-kod för att styla vår applikation. Lägg till följande kod i `style.css` filen:
+
+```css
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+main {
+    max-width: 80ch;
+    padding: 1rem;
+    margin: 0 auto;
+}
+```
+
+Nu när vi har skapat vår CSS-fil så kan vi använda den i vår applikation. För att göra detta så måste vi inkludera CSS-filen i vår layout. Öppna `layout.njk` filen och lägg till följande rad i `<head>`-taggen:
+```html
+<link rel="stylesheet" href="/style.css">
+```
+Nu när vi har inkluderat CSS-filen i vår layout så kommer den att användas för alla sidor som använder denna layout. Ladda om sidan och se att CSS-filen har laddats och att sidan nu är stylad.
+
+## Uppgift
+
+Lägg till en bild för att testa att skapa statiskt innehåll. Använd sedan bilden i din `index.njk` fil.
+
+## Sammanfattning
+
+Vi har nu tittat på att använda templater för att generera HTML-sidor dynamiskt. Vi har också sett hur vi kan använda en layout för att undvika upprepning av kod. Vi har också sett hur vi kan använda statiska filer för att styla vår applikation.

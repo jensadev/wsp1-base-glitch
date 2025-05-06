@@ -13,8 +13,14 @@ nunjucks.configure('views', {
 app.set('view engine', 'njk')
 app.set('views', './views')
 
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
-    res.render('index')
+    const data = {
+        title: 'Välkommen till min test-sida',
+        description: 'Detta är en testapplikation för att visa och förklara grunderna i webbserverprogrammering.'
+    }
+    res.render('index', data)
 })
 
 app.listen(PORT, () => {
