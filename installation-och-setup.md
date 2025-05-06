@@ -67,7 +67,7 @@ app.listen(PORT, () => {
 })
 ```
 
-Denna kod skapar en enkel webbserver som lyssnar på port 3000 (eller den port som anges i miljövariabeln `PORT`). När användaren går till roten av webbplatsen (`/`) så kommer servern att svara med texten "Hello World!".
+Denna kod skapar en enkel webbserver som lyssnar på port 3000 (eller den port som anges i miljövariabeln `PORT`). När användaren går till roten av webbplatsen (`/`) så kommer servern att svara med texten "Hello World!", detta för att vi skapar en route för att hantera GET-förfrågningar till `/`.
 
 För att köra servern så kommer vi att skapa ett start script i vår `package.json` fil. Lägg till följande rad i din `package.json` fil:
 
@@ -97,4 +97,16 @@ Lägg till följande kod i din `package.json` fil:
 }
 ```
 
+Vi kommer att återkomma till detta senare när vi ska köra projektet med glitch.
 
+## Testa att allt fungerar
+
+Det är viktigt att du hela tiden har din testserver igång så att du kan se att allt fungerar. När du arbetar med servern lokalt för utveckling så använder du `npm run dev` för att starta servern.
+
+Om något strular så finns det flera vägar att hitta vad som är fel. Du kan alltid kolla i terminalen där du kör servern för att se om det finns några felmeddelanden. Du kan också kolla i webbläsarens utvecklarverktyg för att se om det finns några felmeddelanden där.
+
+Slutligen så bör Visual Studio Code ge dig en del hjälp med att hitta fel i koden. Leta efter squigglar eller röda linjer i koden. Om du ser något sådant så kan du förutsätta att din kod innehåller fel av något slag och kommer således inte att fungera.
+
+## Sammanfattning
+
+Vi har nu installerat node.js och Express.js och skapat en enkel webbserver som kan hantera GET-förfrågningar. Det är en grund som du kommer att upprepa i de flesta projekt du skapar i framtiden men också något som du kommer kunna bygga vidare på.
