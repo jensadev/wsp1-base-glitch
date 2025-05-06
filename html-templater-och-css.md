@@ -212,7 +212,19 @@ Nu när vi har inkluderat CSS-filen i vår layout så kommer den att användas f
 
 ## Uppgift
 
-Lägg till en bild för att testa att skapa statiskt innehåll. Använd sedan bilden i din `index.njk` fil.
+Lägg till en bild för att testa att skapa statiskt innehåll. Använd sedan bilden i din `index.njk` fil genom att utöka `data`-objektet i din `GET`-route så att den innehåller en `image`-key som pekar på en bild i din `public` mapp. Använd sedan denna key i din `index.njk` fil för att visa bilden.
+
+```javacript
+const data = {
+    title: 'Välkommen till min test-sida',
+    description: 'Detta är en testapplikation för att visa och förklara grunderna i webbserverprogrammering.',
+    image: '/img/test.jpg'
+}
+``
+
+```html
+<img src="{{ image }}" alt="Testbild">
+```
 
 ## Frågor
 
