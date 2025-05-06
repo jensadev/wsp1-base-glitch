@@ -112,6 +112,15 @@ Om något strular så finns det flera vägar att hitta vad som är fel. Du kan a
 
 Slutligen så bör Visual Studio Code ge dig en del hjälp med att hitta fel i koden. Leta efter squigglar eller röda linjer i koden. Om du ser något sådant så kan du förutsätta att din kod innehåller fel av något slag och kommer således inte att fungera.
 
+## Frågor
+
+1. Vad är syftet med att initiera ett nytt Node.js-projekt med kommandot npm init -y?
+    * Vad innehåller package.json-filen som skapas?
+2. Vad är ESM och varför är det viktigt att specificera "type": "module" i package.json-filen?
+3. Varför använder vi nodemon istället för att köra servern direkt med node?
+4. Lista tre kommandon som används för att installera Express.js och nodemon.
+    * Vad är syftet med varje kommando?
+
 ## Sammanfattning
 
 Vi har nu installerat node.js och Express.js och skapat en enkel webbserver som kan hantera GET-förfrågningar. Det är en grund som du kommer att upprepa i de flesta projekt du skapar i framtiden men också något som du kommer kunna bygga vidare på.

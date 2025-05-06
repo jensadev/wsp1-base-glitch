@@ -214,6 +214,17 @@ Nu när vi har inkluderat CSS-filen i vår layout så kommer den att användas f
 
 Lägg till en bild för att testa att skapa statiskt innehåll. Använd sedan bilden i din `index.njk` fil.
 
+## Frågor
+
+1. Vad är en HTML-templat och hur används den i en webbserver?
+    * Vad är fördelen med att använda templater för att generera HTML-sidor dynamiskt?
+2. Hur skickar vi data till en templat och använder platshållare i templaten?
+    * Vilken syntax använder nunjucks?
+3. Vad är en layout och hur hjälper den oss att undvika upprepning av kod?
+4. Hur skulle du förklara fördelarna med att använda templater och layout i en webbapplikation till någon som är ny inom webbutveckling?
+5. Kan du ge ett exempel på en situation där templater och layout skulle vara särskilt användbara?
+6. Kan du sammanfatta stegen för att skapa och använda en HTML-templat med Nunjucks i en Express.js-applikation?
+
 ## Sammanfattning
 
 Vi har nu tittat på att använda templater för att generera HTML-sidor dynamiskt. Vi har också sett hur vi kan använda en layout för att undvika upprepning av kod. Vi har också sett hur vi kan använda statiska filer för att styla vår applikation.
