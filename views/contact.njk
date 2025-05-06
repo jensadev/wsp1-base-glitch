@@ -1,0 +1,23 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<main class="container">
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
+    <form class="contact-form" action="/contact" method="POST">
+        <div>
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>    
+            <label for="message">Meddelande:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Skicka</button>
+    </form>
+</main>
+{% endblock %}

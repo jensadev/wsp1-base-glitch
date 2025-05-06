@@ -17,4 +17,12 @@ router.get('/about', (req, res) => {
     res.render("about", data)
 })
 
+router.get('/contact', (req, res) => {
+    const data = {
+        title: 'Kontakta oss',
+        message: 'Fyll i formuläret nedan för att skicka ett meddelande till oss.'
+    }
+    res.render('contact', data)
+})
+
 export default router

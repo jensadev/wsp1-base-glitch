@@ -108,7 +108,7 @@ För att förenkla navigeringen mellan sidorna så ska vi lägga till en navbar 
     <ul>
         <li><a href="/">Startsidan</a></li>
         <li><a href="/about">Om oss</a></li>
-        <li><a href="/adventure">Äventyr</a></li>
+        <li><a href="/contact">Kontakt</a></li>
     </ul>
 </nav>
 ```
@@ -145,5 +145,38 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 ```
 
+Nu när vi har installerat och konfigurerat `body-parser` så kan vi börja skapa våra POST-routes. Vi kommer att skapa en POST-route för att hantera formulär som skickas in från klienten.
 
+## En ny route, /contact
+
+Nu ska vi skapa en ny route för `/contact`. Denna route kommer att hantera ett formulär som användaren kan fylla i för att skicka ett meddelande till oss. Skapa en ny route i `index.js` filen med följande kod:
+```javascript
+router.get('/contact', (req, res) => {
+    const data = {
+        title: 'Kontakta oss',
+        message: 'Fyll i formuläret nedan för att skicka ett meddelande till oss.'
+    }
+    res.render('contact', data)
+})
+```
+Nu har vi skapat en ny route för `/contact`. Vi behöver också skapa en vy för den. Skapa en ny fil i `views` mappen med namnet `contact.njk` och lägg till följande kod:
+```html
+{% extends "layout.njk" %}
+
+{% block content %}
+<main>
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
+    <form action="/contact" method="POST">
+        <label for="name">Namn:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Meddelande:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Skicka</button>
+    </form>
+</main>
+{% endblock %}
+```
 
