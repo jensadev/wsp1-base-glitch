@@ -2,19 +2,33 @@ body {
     font-family: sans-serif;
     background-color: #f0f0f0;
     color: #333;
+    font-size: 1.2rem;
 }
+
 .container {
     max-width: 80ch;
     padding: 1rem;
     margin: 0 auto;
 }
 
-nav > ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
+nav {
+    text-transform: uppercase;
+
+    >ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+    }
 }
+
+footer {
+    p {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+}
+
 
 .contact-form {
     display: flex;
