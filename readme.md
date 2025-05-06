@@ -16,3 +16,4 @@ Eftersom vi kommer att låta användaren välja olika vägar genom spelet så ko
 ## Innehållsförteckning
 
 1. [Installation och setup](installation-och-setup.md)
+2. [HTML-templater och CSS](html-templater-och-css.md)
