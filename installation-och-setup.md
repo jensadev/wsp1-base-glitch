@@ -25,17 +25,22 @@ Detta kommer att installera Express.js och nodemon och lägga till dem i din `pa
 
 Anledningen till att vi installerar paket med node.js är att när vi sedan laddar ned koden från git så kommer vi att kunna köra `npm install` och då kommer alla de paket som vi har installerat att laddas ned automatiskt (kommandot läser `package.json` filen och laddar ned alla de paket som är listade där). Detta gör det enklare att dela koden med andra och att köra den på olika datorer.
 
-## ESM modul
+## Anvädningen av ESM
 
-Vi kommer att skriva vår kod i ESM-moduler. Detta innebär att vi kommer att använda `import` och `export` istället för `require` och `module.exports`. För att kunna använda ESM-moduler i node.js så måste vi ange `"type": "module"` i vår `package.json` fil. Lägg till följande rad i din `package.json` fil:
+ESM är ett modulformat som gör det möjligt att använda `import` och `export` i JavaScript. Det är en nyare standard för att skriva JavaScript-kod.
+
+För att använda ESM i ditt projekt så måste du ange det i din `package.json` fil. Öppna `package.json` filen och lägg till följande rad:
 
 ```json
 "type": "module"
 ```
 
-Detta kommer att göra att node.js kommer att behandla alla `.js` filer i ditt projekt som ESM-moduler. Du kan nu använda `import` och `export` i din kod.
+### Varför använder vi ESM?
 
-Anledningen till att vi använder ESM-moduler är att det är en nyare standard för att skriva JavaScript-kod. 
+* **Standardisering:** ESM är den officiella standarden för moduler i JavaScript.
+* **Förbättrad syntax:** import och export är mer intuitiva och läsbara.
+* **Framtidssäker:** ESM är framtiden för JavaScript-moduler och stöds av moderna JavaScript-motorer.
+
 
 ### .gitignore för att ignorera node_modules
 
