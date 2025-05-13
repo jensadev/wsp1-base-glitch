@@ -172,6 +172,8 @@ Nu har vi skapat en vy för `/contact` som innehåller ett formulär. Formuläre
 
 För att styra ett formulär så använder vi `action` attributet i `<form>` taggen. Detta attribut anger vilken URL som formuläret ska skicka data till när det skickas in. I det här fallet så skickar vi data till `/contact` routen. Vi anger också metoden som formuläret ska använda, i det här fallet `POST`.
 
+Tips: Om du önskar eller skapar delar av en sida som du vill återanvända så kan du flytta den till en egen fil. Sedan inkluderar du den i din vy med `{% include "filnamn.njk" %}`.
+
 ## Hantera POST-förfrågningar från /contact
 
 Nu ska vi skapa en POST-route för att hantera formuläret som skickas in från `/contact` routen. Formulärets action pekar till `/contact`, så för att hantera POST-förfrågningar till `/contact` så lägger vi till en ny route i `index.js` filen med metoden `router.post()`. Denna metod används för att hantera POST-förfrågningar.
@@ -188,7 +190,6 @@ Nu när vi har skapat en POST-route för `/contact` så kan vi testa den. Starta
 ```javascript
 { name: 'test', email: 'test@test.se', message: 'test' }
 ```
-
 
 ## Frågor
 

@@ -3,6 +3,7 @@ import nunjucks from 'nunjucks'
 import morgan from 'morgan'
 
 import indexRouter from './routes/index.js'
+import charactersRouter from './routes/characters.js'
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -23,6 +24,7 @@ app.set('views', './views')
 app.use(express.static('public'))
 
 app.use('/', indexRouter)
+app.use('/characters', charactersRouter)
 
 app.use((req, res, next) => {
     res.status(404).send('Sidan hittades inte!')
