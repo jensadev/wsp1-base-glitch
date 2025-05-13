@@ -57,7 +57,7 @@ Nu när vi har lagt till en 404 felhanterare så kan vi testa den genom att gå 
 
 #### Övning
 
-Istället för att skicka tillbaka ett felmeddelande så kan vi skicka tillbaka en vy som visar ett felmeddelande. Skapa en ny vy i `views` mappen med namnet `404.njk` och lägg till ett meddelande till användaren. Du kan med fördel fortfarande använda `layout.njk` filen för att hålla det enkelt. 
+Istället för att skicka tillbaka ett felmeddelande så kan vi skicka tillbaka en vy som visar ett felmeddelande. Skapa en ny vy i `views` mappen med namnet `404.njk` och lägg till ett meddelande till användaren. Du kan med fördel fortfarande använda `layout.njk` filen för att sidorna ska använda din skapade layout.  Du behöver sedan ändra koden i `server.js` så att `res.render` används istället för `res.send`.
 
 Om du vill så kan du göra samma för 500 felmeddelandet.
 

@@ -244,3 +244,8 @@ Vi har nu tittat på att använda templater för att generera HTML-sidor dynamis
 ## Kod
 
 Vill du titta på koden för det här steget så hittar du en länken till comitten här: [html-templater-och-css](https://github.com/jensadev/wsp1-base-glitch/tree/9b914b6b5ca4a155c6ff4d8f7d513b24315b2bc1)
+
+Så för att kolla denna commit så kan du köra följande kommando i terminalen:
+```bash
+git checkout 9b914b6b5ca4a155c6ff4d8f7d513b24315b2bc1
+```

@@ -207,3 +207,8 @@ I det här avsnittet har vi gått igenom hur vi kan hantera olika typer av HTTP-
 ## Kod
 
 Vill du titta på koden för det här steget så hittar du en länken till comitten här: [Routing och hantering av HTTP-förfrågningar](https://github.com/jensadev/wsp1-base-glitch/tree/cbb1a1c7bc6455d06d96f4984b804fb9b74e7751)
+
+Så för att kolla denna commit så kan du köra följande kommando i terminalen:
+```bash
+git checkout cbb1a1c7bc6455d06d96f4984b804fb9b74e7751
+```
