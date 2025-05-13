@@ -128,3 +128,18 @@ Vi har nu installerat node.js och Express.js och skapat en enkel webbserver som 
 ## Kod
 
 Vill du titta på koden för det här steget så hittar du en länken till comitten här: [installation och setup](https://github.com/jensadev/wsp1-base-glitch/tree/76bbeb67be825aba2c85c93d22f11374ea80e957)
+
+## Köra kod från en viss commit
+
+Vill du köra koden från en viss commit så kan du göra det genom att klona repot och sedan köra följande kommando i terminalen:
+
+```bash
+git checkout <commit-id>
+```
+Detta kommer att sätta din kod till den version som finns i commit-id. Du kan sedan köra koden med `npm run dev` för att se hur det fungerar.
+
+Så för att köra koden från det här steget så kan du köra följande kommando i terminalen:
+
+```bash
+git checkout 76bbeb67be825aba2c85c93d22f11374ea80e957
+```
