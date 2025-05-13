@@ -143,3 +143,9 @@ Så för att köra koden från det här steget så kan du köra följande komman
 ```bash
 git checkout 76bbeb67be825aba2c85c93d22f11374ea80e957
 ```
+
+För att sedan gå tillbaka till den senaste versionen så kan du köra följande kommando:
+
+```bash
+git checkout main
+```
